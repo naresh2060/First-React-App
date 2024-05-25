@@ -5,14 +5,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import About from './components/About';
-import { 
-  BrowserRouter as Router,
-  Switch,
-  Link,
-  Route, 
-  Routes
-    } from 'react-router-dom';
+// import About from './components/About';
+
 function App() {
   const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
@@ -57,25 +51,30 @@ function App() {
 
   };
   return (
-    <>
-      <Router>
-        <Navbar titleText="Weber" homeText="Home" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        {/* <About/> */}
+    // <>
+    //   <Router>
+    //     <Navbar titleText="Weber" homeText="Home" mode={mode} toggleMode={toggleMode} />
+    //     <Alert alert={alert} />
+    //     {/* <About/> */}
 
-        <Routes>
-          <Route exact path="/about" element={<About/>} >
-            {/* <About /> */}
-          </Route>
-          <Route exact path="/" element={<TextForm title="Form Area" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />} >
-            {/* <TextForm title="Form Area" mode={mode} toggleMode={toggleMode} showAlert={showAlert} /> */}
+    //     <Routes>
+    //       <Route exact path="/about" element={<About/>} >
+    //         {/* <About /> */}
+    //       </Route>
+    //       <Route exact path="/" element={<TextForm title="Form Area" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />} >
+    //         {/* <TextForm title="Form Area" mode={mode} toggleMode={toggleMode} showAlert={showAlert} /> */}
 
-          </Route>
-        </Routes>
+    //       </Route>
+    //     </Routes>
 
-      </Router>
-    </>
-
+    //   </Router>
+      
+    // </>
+<>
+<Navbar titleText="Weber" homeText="Home" mode={mode} toggleMode={toggleMode} />
+     <Alert alert={alert} />
+     <TextForm title="Form Area" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />
+</>
     
   );
 }
