@@ -85,7 +85,7 @@ export default function TextForm(props) {
           {" "}
           {text.trim().split(/\s+/).filter(word => word).length} words {text.length} characters{" "}
         </p>
-        <p>{0.0042 * text.trim().split(/\s+/).filter(word => word).length} Minutes to read (238 WPM)</p>
+        <p>{0.252 * text.trim().split(/\s+/).filter(word => word).length} Seconds to read (238 WPM)</p>
         <h2>Preview</h2>
         <p>
           {text.length > 0
